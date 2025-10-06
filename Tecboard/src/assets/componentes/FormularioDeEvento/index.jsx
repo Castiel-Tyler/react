@@ -1,9 +1,11 @@
 
-import './FormularioDeEventos/FormularioDeEventos.css' 
+import './FormularioDeEventos.css'
 import { CampoDeEntrada } from '../CampoDeEntrada'
 import { CampoDeFormulario } from '../CampoDeFormulario'
-import {TituloFormulario} from '../TituloFormulario'
-import {Label} from '../Label'
+import { TituloFormulario } from '../TituloFormulario'
+import { Label } from '../Label'
+import { Botao } from '../Botao'
+import { ListaSuspensa  } from '../ListaSuspensa'
 
 
 
@@ -11,14 +13,29 @@ export function FormularioDeEvento() {
     return (
         <form className="form-evento">
             <TituloFormulario>Preencha para criar um evento:</TituloFormulario>
+
+            <div className='campos'>
+                <CampoDeFormulario>
+                    <Label htmlFor='nome'>Qual é o nome do evento</Label>
+                    <CampoDeEntrada type='text' id='nome' placeholder='Sumer hev hits' />
+                </CampoDeFormulario>
+
+                <CampoDeFormulario>
+                    <Label htmlFor='dataEvento'>Qual é a data do evento</Label>
+                    <CampoDeEntrada type='date' id='nome' placeholder='dataEvento' />
+                </CampoDeFormulario>
+
+                <CampoDeFormulario>
+                    <Label htmlFor='tipoEvento'></Label>
+                    <ListaSuspensa></ListaSuspensa>
+                </CampoDeFormulario>
+            </div>
+                <div className='acoes'>
+                    <Botao>
+                        Criar Evento
+                    </Botao>
+                </div>
             
-
-            <CampoDeFormulario>
-                <Label htmlFor='nome'>Qual é o nome do evento</Label>
-                <CampoDeEntrada type='text' id='nome' placeholder='Sumer hev hits' />
-
-            </CampoDeFormulario>
-
         </form>
 
     )
