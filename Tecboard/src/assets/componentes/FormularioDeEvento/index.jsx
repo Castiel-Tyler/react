@@ -1,10 +1,11 @@
+
+import './FormularioDeEventos/FormularioDeEventos.css' 
 import { CampoDeEntrada } from '../CampoDeEntrada'
 import { CampoDeFormulario } from '../CampoDeFormulario'
 import {TituloFormulario} from '../TituloFormulario'
 import {Label} from '../Label'
 
 
-import './FormularioDeEventos.css' 
 
 export function FormularioDeEvento() {
     return (
